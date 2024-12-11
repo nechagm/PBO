@@ -15,6 +15,6 @@
     <body>
         <h1>Problem was found</h1>
         <p>${errorMessage}</p>
-        <p><a href="index.jsp">Go back to dashboard</a></p>
+        <p><a href="welcome.jsp">Go back to dashboard</a></p>
     </body>
 </html>
