@@ -23,7 +23,7 @@
         <input type="password" name="password" value="${user.password}" required><br><br>
 
         <label for="fullName">Full Name:</label>
-        <input type="text" name="fullName" value="${user.fullname}" required><br><br>
+        <input type="text" name="fullName" value="${user.fullName}" required><br><br>
 
         <button type="submit">Update User</button>
     </form>

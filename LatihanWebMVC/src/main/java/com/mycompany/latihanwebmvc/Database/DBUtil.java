@@ -13,13 +13,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBUtil {
-    private static final String URL = "jdbc:mariadb://localhost:3306/jdbc_latihan"; //url database
+    private static final String URL = "jdbc:mysql://localhost:3306/jdbc_latihan"; //url database
     private static final String USER = "root";   // user database
     private static final String PASSWORD = "";   // password database
 
     static {
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

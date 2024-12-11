@@ -36,8 +36,9 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-    
+       
     }
+
 
     // Getter dan Setter untuk username
      public int getId() {
@@ -73,6 +74,7 @@ public class User {
     }
 
     // Validasi login (contoh saja kita kasih hardcode untuk username "admin" dan password "admin123")
-   public boolean isValidUser() {
-       return "admin".equals(username) && "admin123".equals(password);   }
+    public boolean isValidUser() {
+        return "admin".equals(username) && "admin123".equals(password);
+    }
 }

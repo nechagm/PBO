@@ -22,7 +22,7 @@ import java.util.List;
  *
  * @author helmy
  */
-@WebServlet("/userList")
+@WebServlet("/UserList")
 public class UserListServlet extends HttpServlet {
 
     @Override
@@ -36,14 +36,14 @@ public class UserListServlet extends HttpServlet {
                     User user = new User(
                         rs.getInt("id"),
                         rs.getString("username"),
-                        rs.getString("password"),
-                        rs.getString("full_name")
+                         rs.getString("password"),
+                         rs.getString("fullName")
                     );
                     users.add(user);
                 }
             }
             request.setAttribute("users", users);
-            request.getRequestDispatcher("/userList.jsp").forward(request, response);
+            request.getRequestDispatcher("/UserList.jsp").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
             response.sendRedirect("error.jsp");

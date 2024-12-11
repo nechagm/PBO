@@ -38,10 +38,12 @@ public class AddUserServlet extends HttpServlet {
                 stmt.setString(3, user.getFullName());
                 stmt.executeUpdate();
             }
-            response.sendRedirect("userList.jsp"); // Redirect ke halaman list setelah berhasil
+         
+            response.sendRedirect("UserList.jsp"); // Redirect ke halaman list setelah berhasil
         } catch (SQLException e) {
             e.printStackTrace();
             response.sendRedirect("error.jsp");
+            
         }
     }
 }
