@@ -4,10 +4,13 @@
     Author     : helmy
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="com.mycompany.latihanwebmvc.Model.User"%>
 <%@ page contentType="text/html;charset=UTF-8" language
 
 ="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page import="java.sql.ResultSet"%>
 
 <html>
 <head>
@@ -25,13 +28,13 @@
                 <th>Actions</th>
             </tr>
         </thead>
+        <% List<User>users =(List<User>)request.getSession().getAttribute("users");%>
         <tbody>
             <c:forEach var="user" items="${users}">
                 <tr>
                     <td>${user.id}</td>
                     <td>${user.username}</td>
-                    <td>${user.fullName}</td>
-
+                    <td>${user.getFullName()}</td>
                     <td>
                         <a href="editUser?id=${user.id}">Edit</a> |
                         <a href="deleteUser?id=${user.id}">Delete</a>
@@ -42,5 +45,8 @@
     </table>
 
     <a href="addUser.jsp">Tambah User Baru</a>
+    <div>
+    <a href="welcome.jsp">kembali ke welcome page</a>
+    <div>
 </body>
 </html>
